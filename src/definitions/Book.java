@@ -25,6 +25,10 @@ public class Book {
         this.thirteenDigitISBNNumber = thirteenDigitISBNNumber;
     }
 
+    public Book() {
+
+    }
+
 }
 
 
