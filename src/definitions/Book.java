@@ -35,7 +35,34 @@ public class Book {
         this.thirteenDigitISBNNumber = "2345678912345";
     }
 
+    /**
+     * This method return name of book .
+     *
+     * @return The name of the books
+     */
 
+
+    public String getBookName() {
+        return bookName;
+    }
+    
+    public void setBookName(String bookName) {
+
+        this.bookName = bookName;
+    }
+
+    /**
+     * This method return author name of book .
+     *
+     * @return The author name of the books
+     */
+    public String getBookAuthorName() {
+        return bookAuthorName;
+    }
+
+    public void setBookAuthorName(String bookAuthorName) {
+        this.bookAuthorName = bookAuthorName;
+    }
 }
 
 
