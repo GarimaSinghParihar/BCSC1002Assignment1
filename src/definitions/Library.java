@@ -75,4 +75,14 @@ public class Library {
         System.out.println("thank You for returning" + name + ".Hope you read it and find its content useful");
     }
 
+    /**
+     * This method shows a list of books in our inventory
+     */
+
+    public void listInventory() {
+        for (Book book : booksCurrentlyAvailable) {
+            System.out.println(book);
+        }
+    }
+
 }
