@@ -54,4 +54,14 @@ public class Library {
     public int hashCode() {
         return Arrays.hashCode(booksCurrentlyAvailable);
     }
+
+    /**
+     * This method add a book to a library.
+     *
+     * @param name of the book to be added.
+     */
+
+    public void doIssueBook(String name) {
+        System.out.println(name + "book is issued for you");
+    }
 }
