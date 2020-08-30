@@ -9,17 +9,47 @@ package definitions;
 import java.util.Arrays;
 
 public class Library {
-    private Book[] booksCurrentlyAvailable;
+    private static Book[] booksCurrentlyAvailable;
 
     public Library() {
-        this.booksCurrentlyAvailable = new Book[15];
+        booksCurrentlyAvailable = new Book[15];
         for (int index = 0; index < booksCurrentlyAvailable.length; index++) {
             booksCurrentlyAvailable[index] = new Book("Books" + (index + 1));
         }
     }
 
     public Library(Book[] booksCurrentlyAvailable) {
-        this.booksCurrentlyAvailable = booksCurrentlyAvailable;
+        Library.booksCurrentlyAvailable = booksCurrentlyAvailable;
+    }
+
+    /**
+     * This method add a book to a library.
+     *
+     * @param name of the book to be added.
+     */
+
+    public static void doIssueBook(String name) {
+        System.out.println(name + "book is issued for you");
+    }
+
+    /**
+     * This method returns the book back to the library .
+     *
+     * @param name The name of the book you want to return
+     */
+
+    public static void doReturnBook(String name) {
+        System.out.println("thank You for returning " + name + ".Hope you read it and find its content useful");
+    }
+
+    /**
+     * This method shows a list of books in our inventory
+     */
+
+    public static void listInventory() {
+        for (Book book : booksCurrentlyAvailable) {
+            System.out.println(book);
+        }
     }
 
     /**
@@ -32,7 +62,7 @@ public class Library {
     }
 
     public void setBooksCurrentlyAvailable(Book[] booksCurrentlyAvailable) {
-        this.booksCurrentlyAvailable = booksCurrentlyAvailable;
+        Library.booksCurrentlyAvailable = booksCurrentlyAvailable;
     }
 
     @Override
@@ -47,42 +77,11 @@ public class Library {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Library library = (Library) o;
-        return Arrays.equals(booksCurrentlyAvailable, library.booksCurrentlyAvailable);
+        return Arrays.equals(booksCurrentlyAvailable, booksCurrentlyAvailable);
     }
 
     @Override
     public int hashCode() {
         return Arrays.hashCode(booksCurrentlyAvailable);
     }
-
-    /**
-     * This method add a book to a library.
-     *
-     * @param name of the book to be added.
-     */
-
-    public void doIssueBook(String name) {
-        System.out.println(name + "book is issued for you");
-    }
-
-    /**
-     * This method returns the book back to the library .
-     *
-     * @param name The name of the book you want to return
-     */
-
-    public void doReturnBook(String name) {
-        System.out.println("thank You for returning" + name + ".Hope you read it and find its content useful");
-    }
-
-    /**
-     * This method shows a list of books in our inventory
-     */
-
-    public void listInventory() {
-        for (Book book : booksCurrentlyAvailable) {
-            System.out.println(book);
-        }
-    }
-
 }

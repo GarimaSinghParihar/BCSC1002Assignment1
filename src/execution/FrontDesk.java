@@ -1,7 +1,7 @@
 /*  Created by IntelliJ IDEA.
- *  User: Divyansh Bhardwaj (dbc2201)
- *  Date: 21/08/20
- *  Time: 3:50 PM
+ *  User: Garima Singh Parihar (191500287)
+ *  Date: 30/08/20
+ *  Time: 8:00 PM
  *  File Name : FrontDesk.java
  * */
 package execution;
@@ -9,7 +9,6 @@ package execution;
 import definitions.Library;
 
 import java.util.Scanner;
-
 
 public class FrontDesk {
     private static final int ISSUE_BOOK = 1;
@@ -31,41 +30,39 @@ public class FrontDesk {
             System.out.println("2. Return the previously issues books");
             System.out.println("3. Show all previously issue books");
             System.out.println("4. Exit");
+            System.out.println("Enter your choice (1..4): ");
 
             clientInput = scanner.nextInt();
             switch (clientInput) {
                 case ISSUE_BOOK:
                     System.out.println("enter your name");
                     scanner.nextLine();
-                    studentName = scanner.next();
+                    nameOfTheStudent = scanner.next();
                     System.out.println("enter your university Rollno");
                     universityRollNumber = scanner.nextLong();
                     System.out.println("Enter the name of the book that you want to issue");
                     scanner.nextLine();
                     String bookName = scanner.nextLine();
-                    student.doIssueBook(bookName);
+                    Library.doIssueBook(bookName);
                     break;
                 case RETURN_BOOK:
                     System.out.println("enter your name");
-                    studentName = scanner.next();
+                    nameOfTheStudent = scanner.next();
                     scanner.nextLine();
                     System.out.println("enter your university Rollno");
                     universityRollNumber = scanner.nextLong();
                     System.out.println("Enter the name of the book that you want to return");
                     scanner.nextLine();
                     bookName = scanner.nextLine();
-                    student.doReturnBook(bookName);
+                    Library.doReturnBook(bookName);
                     break;
                 case LIST_INVENTORY:
-                    student.listInventory();
+                    Library.listInventory();
                     break;
                 default:
                     System.out.println("WRONG CHOICE");
             }
         } while (clientInput != EXIT);
         scanner.close();
-    }
-
-
     }
 }

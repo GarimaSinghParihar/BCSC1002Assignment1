@@ -42,8 +42,6 @@ public class Book {
      *
      * @return The name of the books
      */
-
-
     public String getBookName() {
         return bookName;
     }
