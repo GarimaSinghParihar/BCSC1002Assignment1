@@ -29,6 +29,13 @@ public class Book {
 
     }
 
+    public Book(String bookName) {
+        this.bookName = "Life is what you make it";
+        this.bookAuthorName = " Preeti Shenoy .";
+        this.thirteenDigitISBNNumber = "2345678912345";
+    }
+
+
 }
 
 
