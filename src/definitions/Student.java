@@ -33,6 +33,17 @@ public class Student {
         this.nameOfStudentFormatFirstMiddleLast = nameOfStudentFormatFirstMiddleLast;
     }
 
+    /**
+     * This method the university roll number of the student (long).
+     *
+     * @return the university roll number of the student (long).
+     */
+    public long getUniversityRollNumber() {
+        return universityRollNumber;
+    }
 
+    public void setUniversityRollNumber(long universityRollNumber) {
+        this.universityRollNumber = universityRollNumber;
+    }
 }
 
