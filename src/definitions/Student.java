@@ -58,5 +58,18 @@ public class Student {
     public void setNumberOfBooksIssued(int numberOfBooksIssued) {
         this.numberOfBooksIssued = numberOfBooksIssued;
     }
+
+    /**
+     * This method return the names of books issued by the student .
+     *
+     * @return the names of books issued by the student
+     */
+    public Book[] getNameOfBooksIssued() {
+        return nameOfBooksIssued;
+    }
+
+    public void setNameOfBooksIssued(Book[] nameOfBooksIssued) {
+        this.nameOfBooksIssued = nameOfBooksIssued;
+    }
 }
 
