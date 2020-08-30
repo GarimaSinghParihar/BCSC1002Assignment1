@@ -45,7 +45,7 @@ public class Book {
     public String getBookName() {
         return bookName;
     }
-    
+
     public void setBookName(String bookName) {
 
         this.bookName = bookName;
@@ -62,6 +62,19 @@ public class Book {
 
     public void setBookAuthorName(String bookAuthorName) {
         this.bookAuthorName = bookAuthorName;
+    }
+
+    /**
+     * This method return ISBN number of book .
+     *
+     * @return The ISBN number of the books
+     */
+    public String getThirteenDigitISBNNumber() {
+        return thirteenDigitISBNNumber;
+    }
+
+    public void setThirteenDigitISBNNumber(String thirteenDigitISBNNumber) {
+        this.thirteenDigitISBNNumber = thirteenDigitISBNNumber;
     }
 }
 
