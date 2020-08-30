@@ -16,4 +16,20 @@ public class Library {
         }
     }
 
+    public Library(Book[] booksCurrentlyAvailable) {
+        this.booksCurrentlyAvailable = booksCurrentlyAvailable;
+    }
+
+    /**
+     * This method return current book that are currently available book[] .
+     *
+     * @return This method return current book that are currently available book[] .
+     */
+    public Book[] getBooksCurrentlyAvailable() {
+        return booksCurrentlyAvailable;
+    }
+
+    public void setBooksCurrentlyAvailable(Book[] booksCurrentlyAvailable) {
+        this.booksCurrentlyAvailable = booksCurrentlyAvailable;
+    }
 }
